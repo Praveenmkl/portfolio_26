@@ -1,0 +1,111 @@
+.hero {
+  min-height: 120vh;
+  background: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--foreground);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.hero-content {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: var(--foreground);
+}
+
+/* Signature Animation Container */
+.signature-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 1.5rem auto;
+  overflow: hidden;
+}
+
+.signature-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background);
+  z-index: 1;
+  animation: revealSignature 4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  animation-delay: 0.8s;
+}
+
+@keyframes revealSignature {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.hero-signature {
+  display: block;
+  filter: brightness(1);
+  transition: filter 0.3s ease;
+  opacity: 0;
+  animation: fadeInSignature 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInSignature {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+[data-theme="light"] .hero-signature {
+  filter: invert(1) brightness(0.9);
+}
+
+[data-theme="light"] .signature-wrapper::before {
+  background: var(--background);
+}
+
+.hero h2 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.hero p {
+  font-size: 1.125rem;
+  color: var(--text-hover);
+  margin-bottom: 2rem;
+}
+
+.hero button {
+  background-color: var(--accent-primary);
+  color: var(--background);
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 0.5rem;
+}
+
+.hero button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
