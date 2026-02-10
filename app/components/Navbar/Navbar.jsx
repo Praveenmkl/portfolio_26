@@ -6,7 +6,7 @@ import Image from 'next/image';
 import './Navbar.css';
 import signature from "../../../public/signature.png"
 
-const Navbar = () => {
+const Navbar = ({ activeSection, setActiveSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -14,8 +14,7 @@ const Navbar = () => {
   // Initialize theme from localStorage on mount
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'dark';
-    const isDark = savedTheme === 'dark';
-    setIsDarkMode(isDark);
+    setIsDarkMode(savedTheme === 'dark');
     document.documentElement.setAttribute('data-theme', savedTheme);
   }, []);
 
@@ -37,6 +36,11 @@ const Navbar = () => {
     setIsDarkMode(!isDarkMode);
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
+  };
+
+  const handleNavClick = (section) => {
+    setActiveSection(section);
+    setIsMenuOpen(false); // Close mobile menu
   };
 
   return (
@@ -61,24 +65,36 @@ const Navbar = () => {
 
         <ul className={isMenuOpen ? 'nav-menu active' : 'nav-menu'}>
           <li className="nav-item">
-            <Link href="#home" className="nav-link" onClick={toggleMenu}>
+            <button 
+              className={`nav-link ${activeSection === 'home' ? 'active' : ''}`} 
+              onClick={() => handleNavClick('home')}
+            >
               Home
-            </Link>
+            </button>
           </li>
           <li className="nav-item">
-            <Link href="#about" className="nav-link" onClick={toggleMenu}>
+            <button 
+              className={`nav-link ${activeSection === 'about' ? 'active' : ''}`} 
+              onClick={() => handleNavClick('about')}
+            >
               About
-            </Link>
+            </button>
           </li>
           <li className="nav-item">
-            <Link href="#projects" className="nav-link" onClick={toggleMenu}>
+            <button 
+              className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`} 
+              onClick={() => handleNavClick('projects')}
+            >
               Projects
-            </Link>
+            </button>
           </li>
           <li className="nav-item">
-            <Link href="#contact" className="nav-link" onClick={toggleMenu}>
+            <button 
+              className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`} 
+              onClick={() => handleNavClick('contact')}
+            >
               Contact
-            </Link>
+            </button>
           </li>
         </ul>
 

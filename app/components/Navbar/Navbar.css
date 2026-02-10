@@ -34,7 +34,6 @@
 }
 
 .navbar-logo {
-  color: var(--text-primary);
   cursor: pointer;
   text-decoration: none;
   display: flex;
@@ -68,7 +67,7 @@
   text-align: center;
   margin: 0;
   padding: 0;
-  gap: 3rem;
+  gap: 1rem;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -82,34 +81,44 @@
 .nav-link {
   color: var(--text-primary);
   text-decoration: none;
-  padding: 0.5rem 0;
-  font-size: 0.95rem;
-  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 400;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Button reset styles */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
   position: relative;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link::before {
+.nav-link::after {
   content: '';
   position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 0;
   height: 2px;
-  bottom: -5px;
-  left: 50%;
-  background: linear-gradient(90deg, transparent, var(--text-primary), transparent);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateX(-50%);
+  background: var(--text-primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  width: 80%;
+}
+
+.nav-link.active {
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
 .nav-link:hover {
   color: var(--text-hover);
-  transform: translateY(-2px);
-}
-
-.nav-link:hover::before {
-  width: 100%;
+  opacity: 0.8;
 }
 
 .theme-toggle {
@@ -197,14 +206,12 @@
     padding: 2rem 0;
     gap: 0;
     border-top: 1px solid var(--border-color);
-    transform: none;
-    left: -100%;
     box-shadow: 0 10px 40px var(--shadow);
+    transform: none;
   }
 
   .nav-menu.active {
     left: 0;
-    transform: none;
   }
 
   .nav-item {
@@ -221,14 +228,11 @@
   .nav-link {
     display: block;
     font-size: 1.1rem;
-  }
-
-  .nav-link::before {
-    bottom: -15px;
+    padding: 0.8rem 2rem;
   }
 
   .nav-link:hover {
-    transform: scale(1.05);
+    opacity: 0.8;
   }
 
   .theme-toggle {
@@ -247,10 +251,6 @@
 
   .navbar.scrolled {
     height: 65px;
-  }
-
-  .logo-image {
-    max-width: 120px;
   }
 
   .theme-toggle {
