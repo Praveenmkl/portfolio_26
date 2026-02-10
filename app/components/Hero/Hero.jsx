@@ -1,8 +1,19 @@
+'use client';
 import Image from 'next/image';
 import "./Hero.css";
 import signature from "../../../public/signature.png"
 
-export default function Hero() {
+export default function Hero({ setActiveSection }) {
+  const handleResumeClick = () => {
+    // Opens resume in a new tab
+    window.open('/CV.pdf', '_blank');
+  };
+
+  const handleContactClick = () => {
+    // Navigate to contact section
+    setActiveSection('contact');
+  };
+
   return (
     <section className="hero" id="home">
       <div className="hero-content">
@@ -18,8 +29,8 @@ export default function Hero() {
           />
         </div>
         <p>I design intuitive user experiences and build powerful web applications. Turning ideas into visually stunning and functional digital products.</p>
-        <button>RESUME</button>
-        <button>Let&apos;s Talk</button>
+        <button onClick={handleResumeClick}>RESUME</button>
+        <button onClick={handleContactClick}>Let&apos;s Talk</button>
       </div>
     </section>
   );

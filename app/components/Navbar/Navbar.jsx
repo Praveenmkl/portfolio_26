@@ -41,12 +41,17 @@ const Navbar = ({ activeSection, setActiveSection }) => {
   const handleNavClick = (section) => {
     setActiveSection(section);
     setIsMenuOpen(false); // Close mobile menu
+    
+    // Remove hash from URL for home section, otherwise keep clean URL
+    if (section === 'home') {
+      window.history.replaceState(null, '', '/');
+    }
   };
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <Link href="/" className="navbar-logo">
+        <button onClick={() => handleNavClick('home')} className="navbar-logo" style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}>
           <Image 
             src={signature} 
             alt="Portfolio Signature Logo" 
@@ -55,7 +60,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
             priority
             className="logo-image"
           />
-        </Link>
+        </button>
         
         <div className="menu-icon" onClick={toggleMenu}>
           <span className={isMenuOpen ? 'bar active' : 'bar'}></span>
