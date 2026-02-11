@@ -15,14 +15,14 @@ const Education = () => {
   title: 'Bachelor of Information and Communication Technology',
   institution: 'University of Kelaniya, Faculty of Computing & Technology',
   period: '2022 - Present',
-  description: 'Studying core computing subjects including data structures, software engineering, databases, web development, and UI/UX design. Actively working on academic and personal full-stack and UI/UX projects.'
+  description: 'Focused on software development, web technologies, databases, and UI/UX design. Working on personal and academic projects to gain practical full-stack development skills.'
 },
 {
   logo: drpc, // School logo
   title: 'G.C.E Advanced Level',
   institution: 'Dr. Richard Pathirana College, Galle',
   period: '2019 - 2021',
-  description: 'Undergraduate in Bachelor of Information and Communication Technology (BICT) – Software Technology Pathway at the University of Kelaniya, focusing on software development, web technologies, and UI/UX design.'
+  description: 'Studied Engineering Technology, Science for Technology, and ICT, building a strong foundation in technology, computing, and engineering concepts.'
 }
   ];
 
