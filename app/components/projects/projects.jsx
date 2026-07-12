@@ -6,6 +6,8 @@ import project1 from '../../../public/project1.webp'
 import project2 from '../../../public/carrental.webp'
 import Project3 from '../../../public/powerfit.webp'
 import Project4 from '../../../public/pb.webp'
+// Temporary placeholder until lms.webp is added to the public folder
+import Project5 from '../../../public/lms.webp'
 
 const Projects = () => {
   const projectsData = [
@@ -48,6 +50,15 @@ const Projects = () => {
   technologies: ["Figma", "Photoshop"],
   liveLink: "https://www.figma.com/design/HbEhT72Y8jbgTrW3CmC3U0/pb-app?node-id=0-1&t=4x3oHzHz2FS9AVW1-1",
 
+},
+
+{
+  id: 5,
+  title: "Library Management System",
+  description: "A comprehensive digital library system designed to streamline book borrowing, user management, and inventory tracking with an intuitive administrative dashboard.",
+  image: Project5,
+  technologies: ["React", "Node.js", "MongoDB", "Express"],
+  liveLink: "https://library-management-system-3sek.vercel.app/",
 }
 
 
