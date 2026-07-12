@@ -30,10 +30,21 @@ export default function LoadingScreen({ onComplete }) {
     return () => clearInterval(interval);
   }, [onComplete]);
 
+  const getLoadingText = (prog) => {
+    if (prog < 15) return "SYSTEM START";
+    if (prog < 30) return "Loading Identity...";
+    if (prog < 45) return "Loading Experience...";
+    if (prog < 60) return "Loading Projects...";
+    if (prog < 75) return "Loading Skills...";
+    if (prog < 90) return "Loading Creativity...";
+    if (prog < 100) return "Portfolio Ready.";
+    return "Enjoy the Journey.";
+  };
+
   return (
     <div className="simple-loading-screen">
       <div className="loading-content">
-        <h1 className="loading-name">PRAVEEN KALANSOORIYA</h1>
+        <h1 className="loading-name">{getLoadingText(progress)}</h1>
         <div className="simple-progress-container">
           <div 
             className="simple-progress-fill" 
