@@ -2,9 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import './Navbar.css';
-import signature from "../../../public/signature.png"
 
 const Navbar = ({ activeSection, setActiveSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,15 +49,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <button onClick={() => handleNavClick('home')} className="navbar-logo" style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}>
-          <Image 
-            src={signature} 
-            alt="Portfolio Signature Logo" 
-            width={250} 
-            height={60}
-            priority
-            className="logo-image"
-          />
+        <button onClick={() => handleNavClick('home')} className="navbar-logo" style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }} aria-label="Home">
         </button>
         
         <div className="menu-icon" onClick={toggleMenu}>

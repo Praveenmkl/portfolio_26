@@ -64,7 +64,7 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Space Mono', monospace;
   line-height: 1.6;
   overflow-x: hidden;
   scrollbar-width: none;
@@ -73,4 +73,20 @@ body {
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+/* Use Poppins for description areas and paragraphs */
+p {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.2px;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.2px;
+}
+
+h4 {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.2px;
 }

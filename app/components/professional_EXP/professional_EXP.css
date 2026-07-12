@@ -58,7 +58,7 @@
   justify-content: center;
   background: var(--background);
   border: 2px solid var(--border-color);
-  border-radius: 10px;
+  border-radius:0px;
   overflow: hidden;
 }
 
@@ -107,6 +107,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Poppins', sans-serif;
   padding: 15px 20px;
   background: transparent;
   border: none;

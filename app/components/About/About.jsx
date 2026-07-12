@@ -18,7 +18,7 @@ const About = () => {
             </p>
           </div>
 
-          <h3 className="techstack">Tech Stack & Design Tools</h3>
+          <h2 className="techstack">Tech Stack & Design Tools</h2>
 
           <div className="tech-stack-container">
             <div className="tech-grid">

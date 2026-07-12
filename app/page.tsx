@@ -7,9 +7,11 @@ import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import Contact from './components/contact/contact';
 import Projects from './components/projects/projects';
+import LoadingScreen from './components/LoadingScreen/LoadingScreen';
 
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
   // State to track which section is active
   const [activeSection, setActiveSection] = useState('home');
 
@@ -19,6 +21,10 @@ export default function Home() {
       window.history.replaceState(null, '', '/');
     }
   }, []);
+
+  if (isLoading) {
+    return <LoadingScreen onComplete={() => setIsLoading(false)} />;
+  }
 
   return (
     <div>

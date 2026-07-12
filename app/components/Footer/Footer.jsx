@@ -1,24 +1,34 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import './Footer.css';
-import signature from '../../../public/signature.png';
 
 const Footer = () => {
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    setIsDarkMode(savedTheme === 'dark');
+
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'data-theme') {
+          setIsDarkMode(document.documentElement.getAttribute('data-theme') === 'dark');
+        }
+      });
+    });
+
+    observer.observe(document.documentElement, { attributes: true });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Left: Signature Logo */}
-        <Link href="/" className="footer-logo">
-          <Image 
-            src={signature} 
-            alt="Praveen Kalansooriya Signature" 
-            width={180} 
-            height={50}
-            className="footer-signature"
-          />
-        </Link>
+       
 
         {/* Center: Copyright */}
         <p className="footer-copyright">
