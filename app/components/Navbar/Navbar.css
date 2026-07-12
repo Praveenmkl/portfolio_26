@@ -173,7 +173,8 @@
 
   .menu-icon {
     display: block;
-    margin-right: 15px;
+    order: -1;
+    margin-right: auto;
   }
 
   .menu-icon .bar.active:nth-child(1) {
