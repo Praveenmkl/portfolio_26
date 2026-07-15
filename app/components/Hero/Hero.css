@@ -1,6 +1,6 @@
 .hero {
   min-height: 120vh;
-  background: var(--background);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;

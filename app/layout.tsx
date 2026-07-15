@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./components/LoadingScreen/LoadingScreen.css";
+import BackgroundParticles from "./components/BackgroundParticles/BackgroundParticles";
 
 export const metadata: Metadata = {
   title: "Praveen Kalansooriya | Portfolio",
@@ -29,7 +30,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <BackgroundParticles />
+        {children}
+      </body>
     </html>
   );
 }

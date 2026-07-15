@@ -1,6 +1,6 @@
 .education-section {
   padding: 60px 20px;
-  background: var(--background);
+  background: transparent;
   transition: background 0.3s ease;
 }
 
