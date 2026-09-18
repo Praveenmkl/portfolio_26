@@ -22,7 +22,7 @@ export default function Hero({ setActiveSection }) {
           <span className="status-text">Available for projects & roles</span>
         </div>
         <h1><TextScramble text="Praveen Kalansooriya" /></h1>
-        <h2>Fullstack Developer <span className="hero-accent-dot">•</span> UI/UX Specialist</h2>
+        <h2>Fullstack Developer <span className="hero-accent-dot">•</span> UI/UX Enthusiast</h2>
         <p>I design intuitive user experiences and build powerful web applications. Turning ideas into visually stunning and functional digital products.</p>
         <div className="hero-cta-group">
           <button className="hero-btn-primary" onClick={handleResumeClick}>
