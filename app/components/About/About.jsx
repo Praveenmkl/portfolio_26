@@ -8,7 +8,8 @@ const About = () => {
     <section className="about" id="about">
       <div className="about-container">
         <div className="about-content">
-          <h2 className="about-title">About Me</h2>
+          <span className="section-eyebrow">// BACKGROUND</span>
+          <h2 className="about-title">Who I Am</h2>
           <div className="about-text">
             <p>
               I am a Bachelor of Information and Communication Technology (BICT) undergraduate and a Full-Stack development and UI/UX enthusiast focused on creating clean, modern, and user-centered digital experiences. I combine design thinking with technical development skills to build visually engaging, functional, and scalable web applications.
@@ -18,6 +19,7 @@ const About = () => {
             </p>
           </div>
 
+          <span className="section-eyebrow">// TOOLKIT</span>
           <h2 className="techstack">Tech Stack & Design Tools</h2>
 
           <div className="tech-stack-container">

@@ -17,7 +17,7 @@
 .about-title {
   font-size: 2rem;
   font-weight: 500;
-  margin-top: 50px;
+  margin-top: 5px;
   margin-bottom: 30px;
   color: var(--foreground);
   text-align: center;
@@ -28,6 +28,7 @@
 .techstack {
   font-size: 2rem;
   font-weight: 500;
+  margin-top: 5px;
   margin-bottom: 30px;
   color: var(--foreground);
   text-align: center;
@@ -80,18 +81,20 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 15px 10px;
-  border-radius: 15px;
-  background: transparent;
+  padding: 16px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  border: 2px solid transparent;
+  border: 1px solid var(--border-color);
 }
 
 .tech-item:hover {
-  transform: translateY(-10px);
-  border-color: transparent;
-  box-shadow: none;
+  transform: translateY(-6px);
+  border-color: #ff9d00;
+  background: rgba(255, 157, 0, 0.05);
+  box-shadow: 0 8px 25px rgba(255, 157, 0, 0.18);
 }
 
 .tech-item img {

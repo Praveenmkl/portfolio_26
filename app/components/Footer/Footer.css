@@ -51,10 +51,11 @@
 }
 
 .footer-social a:hover {
-  background: var(--border-color);
-  border-color: var(--text-primary);
+  background: rgba(255, 157, 0, 0.1);
+  border-color: #ff9d00;
+  color: #ff9d00;
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px var(--shadow);
+  box-shadow: 0 4px 15px rgba(255, 157, 0, 0.35);
 }
 
 .footer-social svg {

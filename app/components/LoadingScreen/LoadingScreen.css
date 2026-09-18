@@ -44,7 +44,8 @@
 
 .simple-progress-fill {
   height: 100%;
-  background-color: var(--foreground);
+  background-color: #ff9d00;
+  box-shadow: 0 0 10px rgba(255, 157, 0, 0.6);
   transition: width 0.15s ease-out;
 }
 

@@ -45,6 +45,7 @@ const ProfessionalExp = () => {
   return (
     <section className="professional-exp">
       <div className="exp-container">
+        <span className="section-eyebrow">// CAREER PATH</span>
         <h2 className="exp-title">Professional Experience</h2>
         
         <div className="exp-list">

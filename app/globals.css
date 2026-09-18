@@ -20,6 +20,20 @@
   --accent-primary: #ffffff;
   --accent-secondary: #e0e0e0;
   --accent-hover: #cccccc;
+  --accent-amber: #ff9d00;
+  --accent-amber-glow: rgba(255, 157, 0, 0.3);
+}
+
+.section-eyebrow {
+  display: block;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: #ff9d00;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 [data-theme="light"] {

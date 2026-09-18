@@ -7,14 +7,14 @@ import project2 from '../../../public/carrental.webp'
 import Project3 from '../../../public/powerfit.webp'
 import Project4 from '../../../public/pb.webp'
 // Temporary placeholder until lms.webp is added to the public folder
-import Project5 from '../../../public/lms.webp'
+import Project5 from '../../../public/project6.png'
 
 const Projects = () => {
   const projectsData = [
    {
   id: 1,
   title: "MELOXIA - CREATIVE DESIGN STUDIO",
-  description: "Designed to engage users and showcase a clean, modern interface with attention to detail.",
+  description: "Developed a modern, user-centric website with intuitive navigation and clean aesthetics to elevate the brand's digital presence.",
   image: project1,
   technologies: ["React", "Node.js", "MongoDB", "Express"],
   liveLink: "https://meloxia.me",
@@ -25,7 +25,7 @@ const Projects = () => {
   {
   id: 2,
   title: "Car Rental Platform",
-  description: "A full-stack car rental platform with smooth booking, dynamic listings, and an intuitive admin dashboard.",
+  description: "Built a full-stack car rental application featuring seamless booking, dynamic listings, and an administrative dashboard for fleet management.",
   image: project2,
   technologies: ["React", "Node.js", "MongoDB", "Express"],
   liveLink: "https://car-rental-wehg.vercel.app/",
@@ -34,18 +34,18 @@ const Projects = () => {
 
   {
   id: 3,
-  title: "Powerfit",
-  description: "Full-Stack MERN Project – a Gym Accessories E-commerce Platform.",
+  title: "PowerFit E-Commerce & Admin Management System",
+  description: "Created a full-stack e-commerce platform with secure JWT authentication, real-time stock validation, and a dedicated administrative dashboard.",
   image: Project3,
-  technologies: ["React", "Node.js", "MongoDB", "Express"],
-  liveLink: "",
+  technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS"],
+  liveLink: "https://gym-accessories-store-ie4ncdj7u-praveen-kalansooriyas-projects.vercel.app/",
   githubLink: "https://github.com/Praveenmkl/gym-accessories-store.git"
 },
 
 {
   id: 4,
   title: "People's Bank Mobile App Redesign",
-  description: "A UI/UX-focused mobile banking redesign created in Figma to improve navigation clarity, transaction flow, and overall user trust.",
+  description: "Designed a UI/UX mobile banking redesign in Figma, optimizing navigation and transaction workflows to enhance user engagement.",
   image: Project4,
   technologies: ["Figma", "Photoshop"],
   liveLink: "https://www.figma.com/design/HbEhT72Y8jbgTrW3CmC3U0/pb-app?node-id=0-1&t=4x3oHzHz2FS9AVW1-1",
@@ -54,12 +54,16 @@ const Projects = () => {
 
 {
   id: 5,
-  title: "Library Management System",
-  description: "A comprehensive digital library system designed to streamline book borrowing, user management, and inventory tracking with an intuitive administrative dashboard.",
+  title: "POS & Inventory Management System",
+  description: "Engineered a full-stack POS system supporting complete order lifecycles, featuring secure RESTful APIs, JWT authentication, and concurrency-safe stock reservation.",
   image: Project5,
-  technologies: ["React", "Node.js", "MongoDB", "Express"],
-  liveLink: "https://library-management-system-3sek.vercel.app/",
-}
+  technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
+  liveLink: "https://pos-order-inventory-system-1ygirvh9h.vercel.app/login",
+  githubLink: "https://github.com/Praveenmkl/POS-Order-Inventory-System"
+},
+
+
+
 
 
   
@@ -68,7 +72,8 @@ const Projects = () => {
   return (
     <section className="projects-section" id="projects">
       <div className="projects-container">
-        <h2 className="projects-title">Projects</h2>
+        <span className="section-eyebrow">// SELECTED WORKS</span>
+        <h2 className="projects-title">Featured Projects</h2>
 
         <div className="projects-grid">
           {projectsData.map((project) => (

@@ -37,6 +37,7 @@ const Education = () => {
   return (
     <section className="education-section">
       <div className="edu-container">
+        <span className="section-eyebrow">// ACADEMIC JOURNEY</span>
         <h2 className="edu-title">Education</h2>
         
         <div className="edu-list">
