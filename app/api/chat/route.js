@@ -8,7 +8,7 @@ export async function POST(req) {
 
     if (!apiKey || apiKey === 'your_api_key_here') {
       return new Response(
-        JSON.stringify({ error: 'API key not configured. Add GOOGLE_GENERATIVE_AI_API_KEY to .env.local and restart the server.' }),
+        JSON.stringify({ error: 'AI Assistant key not configured. Please add GOOGLE_GENERATIVE_AI_API_KEY in Vercel Environment Variables or .env.local.' }),
         { status: 500, headers: { 'Content-Type': 'application/json' } }
       );
     }
