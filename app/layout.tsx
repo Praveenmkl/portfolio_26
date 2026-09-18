@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./components/LoadingScreen/LoadingScreen.css";
-import AIAssistantWrapper from "./components/AIAssistant/AIAssistantWrapper.jsx";
 
 export const metadata: Metadata = {
   title: "Praveen Kalansooriya | Portfolio",
@@ -32,7 +31,6 @@ export default function RootLayout({
       </head>
       <body>
         {children}
-        <AIAssistantWrapper />
       </body>
     </html>
   );

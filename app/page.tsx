@@ -8,7 +8,7 @@ import About from "./components/About/About";
 import Contact from './components/contact/contact';
 import Projects from './components/projects/projects';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen';
-
+import AIAssistantWrapper from './components/AIAssistant/AIAssistantWrapper.jsx';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,6 +37,7 @@ export default function Home() {
       {activeSection === 'projects' && <Projects/>}
 
       <Footer />
+      <AIAssistantWrapper />
     </div>
   );
 }
